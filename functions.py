@@ -63,6 +63,70 @@ PART TWO:
     Dear Hacker Jane Hacks, I think you are amazing! Sincerely, Balloonicorn
 
 """
+from itertools import count
+
+
+def hello_world():
+    print("Hello World")
+
+def say_hi(name):
+    print(f"Hi {name}")
+
+def print_product(num1,num2):
+    print(num1 * num2)
+
+def repeat_string(string,num):
+    print(string * num)
+
+def print_sign(num):
+    if num > 0:
+        print("Higher than 0")
+    elif num < 0:
+        print("Lower than 0")
+    else:
+        print("Zero")
+
+def is_divisible_by_three(num):
+    if num % 3 == 0:
+        return True
+    else:
+        return False
+
+def num_spaces(words):
+
+    count_spaces = 0
+    for char in words:
+        if char == " ":
+            count_spaces += 1
+    return count_spaces
+
+def total_meal_price(meal_price,tip_percent=0.015):
+    tip_amount = meal_price * tip_percent
+    return meal_price + tip_amount
+
+def sign_and_parity(number):
+    sign_parity_list = []
+
+    if number < 0:
+        sign_parity_list.append("Negative")
+    elif number > 0:
+        sign_parity_list.append("Positive")
+
+    if number % 2 == 0:
+        sign_parity_list.append("Even")
+    else:
+        sign_parity_list.append("Odd")
+
+    return sign_parity_list
+
+sign_parity_list = sign_and_parity(2)
+print(sign_parity_list[0])
+print(sign_parity_list[1])
+
+
+
+    
+
 
 ###############################################################################
 
